@@ -11,8 +11,13 @@ export class AppComponent {
   title = 'angulademo';
 
   registerForm: any = FormGroup;
+  form!: FormGroup;
   submitted = false;
-  constructor( private formBuilder: FormBuilder){}
+  constructor( private formBuilder: FormBuilder){
+    this.form=formBuilder.group({
+      phone:['']
+    })
+  }
 
   get f() { return this.registerForm.controls; }
 

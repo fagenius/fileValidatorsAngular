@@ -1,11 +1,8 @@
-<div class="container p-5">
+<!-- <div class="container p-5">
   <form class="row g-3" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div class="col-md-12">
       <label for="inputEmail4" class="form-label">Image Upload</label>
       <input (change)="onImageChangeFromFile($event)" type="file" formControlName="imageInput" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.imageInput.errors }"  id="inputEmail4">
-      <!-- <div *ngIf="f.imageInput.touched" class="invalid-feedback">
-        JPG|JPEG|PNG Image is required
-      </div> -->
       <div *ngIf="submitted && f.imageInput.errors" class="invalid-feedback">
         <div *ngIf="f.imageInput.errors.required">JPG|JPEG|PNG Image is required</div>
 
@@ -16,4 +13,20 @@
       <button type="submit" class="btn btn-primary">Sign in</button>
     </div>
   </form>
+</div> -->
+
+<div class="container mt-5 mb-5 pl-5 ">
+	<div class="row">
+	 <form [formGroup]="form">
+
+<div class="form-group">
+    <label for="phone-number">Phone Number</label>
+
+    <input class="form-control"  type="text" appPhoneMask  formControlName="phone" id="phone-number"  >
+  </div>
+
+
+
+  </form>
+	</div>
 </div>
